@@ -367,3 +367,73 @@ Use 'kill 511' to stop it.
 ✓ Compiled in 1932ms
 ⚠ Cross origin request detected from preview-chat-7026f868-e310-4936-860f-374121923393.space.z.ai to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+⨯ ./src/app/page.tsx:213:25
+Ecmascript file had an error
+[0m [90m 211 |[39m [36mconst[39m [33mCHART_COLORS[39m [33m=[39m [[32m'#10b981'[39m[33m,[39m [32m'#3b82f6'[39m[33m,[39m [32m'#f59e0b'[39m[33m,[39m [32m'#ef4444'[39m[33m,[39m [32m'#8b5cf6'[39m[33m,[39m [32m'#ec4899'[39m]
+ [90m 212 |[39m
+[31m[1m>[22m[39m[90m 213 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mHome[39m() {
+ [90m     |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 214 |[39m   [90m// State[39m
+ [90m 215 |[39m   [36mconst[39m [activeTab[33m,[39m setActiveTab] [33m=[39m useState([32m'dashboard'[39m)
+ [90m 216 |[39m   [36mconst[39m [sidebarOpen[33m,[39m setSidebarOpen] [33m=[39m useState([36mfalse[39m)[0m
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+ GET / 500 in 1120ms (compile: 992ms, render: 128ms)
+⨯ ./src/app/page.tsx:213:25
+Ecmascript file had an error
+[0m [90m 211 |[39m [36mconst[39m [33mCHART_COLORS[39m [33m=[39m [[32m'#10b981'[39m[33m,[39m [32m'#3b82f6'[39m[33m,[39m [32m'#f59e0b'[39m[33m,[39m [32m'#ef4444'[39m[33m,[39m [32m'#8b5cf6'[39m[33m,[39m [32m'#ec4899'[39m]
+ [90m 212 |[39m
+[31m[1m>[22m[39m[90m 213 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mHome[39m() {
+ [90m     |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 214 |[39m   [90m// State[39m
+ [90m 215 |[39m   [36mconst[39m [activeTab[33m,[39m setActiveTab] [33m=[39m useState([32m'dashboard'[39m)
+ [90m 216 |[39m   [36mconst[39m [sidebarOpen[33m,[39m setSidebarOpen] [33m=[39m useState([36mfalse[39m)[0m
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+ GET / 500 in 83ms (compile: 74ms, render: 9ms)
+⨯ ./src/app/page.tsx:213:25
+Ecmascript file had an error
+[0m [90m 211 |[39m [36mconst[39m [33mCHART_COLORS[39m [33m=[39m [[32m'#10b981'[39m[33m,[39m [32m'#3b82f6'[39m[33m,[39m [32m'#f59e0b'[39m[33m,[39m [32m'#ef4444'[39m[33m,[39m [32m'#8b5cf6'[39m[33m,[39m [32m'#ec4899'[39m]
+ [90m 212 |[39m
+[31m[1m>[22m[39m[90m 213 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mHome[39m() {
+ [90m     |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 214 |[39m   [90m// State[39m
+ [90m 215 |[39m   [36mconst[39m [activeTab[33m,[39m setActiveTab] [33m=[39m useState([32m'dashboard'[39m)
+ [90m 216 |[39m   [36mconst[39m [sidebarOpen[33m,[39m setSidebarOpen] [33m=[39m useState([36mfalse[39m)[0m
+
+the name `Home` is defined multiple times
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+ GET / 500 in 78ms (compile: 69ms, render: 9ms)
+✓ Compiled in 236ms

@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { toast } from 'sonner'
 import {
   Building2, Users, FileText, DollarSign, Wrench, BarChart3,
-  Home, Plus, Search, Filter, MoreVertical, Eye, Edit, Trash2,
+  HomeIcon, Plus, Search, Filter, MoreVertical, Eye, Edit, Trash2,
   TrendingUp, TrendingDown, AlertCircle, CheckCircle, Clock,
   Phone, Mail, MapPin, Calendar, Bed, Bath, Square, Car,
   ChevronRight, X, Download, RefreshCw, Settings, Bell,
@@ -210,7 +210,7 @@ const getCategoryIcon = (category: string) => {
 
 const CHART_COLORS = ['#10b981', '#3b82f6', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899']
 
-export default function Home() {
+export default function TechRealestApp() {
   // State
   const [activeTab, setActiveTab] = useState('dashboard')
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -2040,11 +2040,14 @@ function PaymentForm({ leases, onSave, onCancel }: { leases: Lease[]; onSave: (d
 
   const selectedLease = leases.find(l => l.id === formData.leaseId)
 
-  useEffect(() => {
-    if (selectedLease && !formData.amount) {
-      setFormData(f => ({ ...f, amount: String(selectedLease.monthlyRent) }))
-    }
-  }, [selectedLease, formData.amount])
+  const handleLeaseChange = (leaseId: string) => {
+    const lease = leases.find(l => l.id === leaseId)
+    setFormData(f => ({
+      ...f,
+      leaseId,
+      amount: lease ? String(lease.monthlyRent) : f.amount
+    }))
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -2063,7 +2066,7 @@ function PaymentForm({ leases, onSave, onCancel }: { leases: Lease[]; onSave: (d
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-2">
           <Label htmlFor="leaseId">Lease</Label>
-          <Select value={formData.leaseId} onValueChange={(value) => setFormData({ ...formData, leaseId: value })} required>
+          <Select value={formData.leaseId} onValueChange={handleLeaseChange} required>
             <SelectTrigger><SelectValue placeholder="Select lease" /></SelectTrigger>
             <SelectContent>
               {leases.map((l) => (
